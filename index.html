@@ -8,10 +8,15 @@
     <body>
 
         <div class="container">
-            
+            <!---------->
+            <input id="input_option" value="Calcular tempo" type="button" onclick="ativar_tempo()">
+            <input id="input_option" value="Calcular pace" type="button" onclick="ativar_pace()">
+                <div style="display: block;" id="pace_calculator">
                 <!----------------->
                 <!---syncy para o arquivo JS que tem o algoritimo-->
                 <script src="source/system.js"></script>
+                <!--syncy para o arquivo js que contem a navegação do site-->
+                <script src="source/navigation.js"></script>
                 <!------------->
                 <input id="distancia" type="number" placeholder="Distância">
                 <!----------------->
@@ -21,7 +26,7 @@
                 <!------------------>
                 <input id="segundo" type="number" placeholder="Segundo">
                 <!--------botão que ativa função----------->
-                <button type="submit" onclick="calculator()">Resultado</button>
+                <button type="submit" onclick="calculator()">Calcular pace</button>
                 <!------------------->
                 <div class="print">
                     <!--Nesse <P> com Id é printado o resultado da calculadora---->
@@ -29,7 +34,22 @@
                     <!-------->
                 </div>
                 <!-------------->
-            
+                </div>
+                <!---segunda div que aparece através da ativação do botão "ver tempo"-->
+                <div  style="display: none;" id="tempo_calculator">
+                    <!------------>
+                    <input id="distance" type="number" placeholder="Distância">
+                    <!---------------->
+                    <input id="hours" type="number" placeholder="Hora">
+                    <!-------------->
+                    <input id="mins" type="number" placeholder="Minuto">
+                    <!------------->
+                    <input id="seconds" type="number" placeholder="Segundo">
+                    <!------>
+                    <button onclick="tempo_calculator()" type="submit">Calcular tempo</button>
+                    <!------------------>
+                </div>
+
         </div>
 
     </body>

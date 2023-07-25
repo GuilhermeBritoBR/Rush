@@ -24,3 +24,6 @@ function calculator()    {
     /*-----------------------*/
     print_result.innerHTML= pace.toFixed(2);
 }
+function tempo_calculator() {
+    
+}
