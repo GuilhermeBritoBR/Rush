@@ -25,5 +25,36 @@ function calculator()    {
     print_result.innerHTML= pace.toFixed(2);
 }
 function tempo_calculator() {
+    let distancia = document.getElementById("distance").value;
+    /*-----------------------*/
+    let minuto = document.getElementById("mins").value;
+    /*-----------------------*/
+    let segundo_sem_conversao = (document.getElementById("seconds").value);
+    /*-------------------------*/
+    /*(50s/60)x5 = 0.83333x5 = 4.16666 */
+    let segundo_pad = parseFloat(((segundo_sem_conversao)/60).toFixed(2));
+    let segundo = parseFloat(((segundo_pad)*distancia).toFixed(1));
+    // let segundo_bruto;
     
+    
+    let tempo_bruto = ((minuto)*distancia);
+    /*--------------------------*/
+    let tempo = tempo_bruto+segundo;
+    /*--------------------*//*-----------*/
+    // if(segundo_pad >= 0.6){
+    //     /*------------------------------*/
+    //     /*((4.1666- 4)x0.6)=0.1+4*/
+    //   segundo_bruto = (((segundo-segundo.toFixed(2))*0.60)+segundo.toFixed(2));
+    //     /*------------------------*/
+    // }else{
+    //     segundo_bruto = segundo;
+
+    // }
+    /*-------------------------*/
+    let print_result_tempo = document.getElementById("print_result_tempo");
+    /*printando*/
+    print_result_tempo.innerHTML = tempo.toFixed(2);
+    
+    /*-----------------------*/
+
 }

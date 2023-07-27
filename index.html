@@ -9,6 +9,7 @@
 
         <div class="container">
             <!---------->
+            <!--botoes que trocam a calculadora!-->
             <input id="input_option" value="Calcular tempo" type="button" onclick="ativar_tempo()">
             <input id="input_option" value="Calcular pace" type="button" onclick="ativar_pace()">
                 <div style="display: block;" id="pace_calculator">
@@ -40,7 +41,6 @@
                     <!------------>
                     <input id="distance" type="number" placeholder="Distância">
                     <!---------------->
-                    <input id="hours" type="number" placeholder="Hora">
                     <!-------------->
                     <input id="mins" type="number" placeholder="Minuto">
                     <!------------->
@@ -48,6 +48,11 @@
                     <!------>
                     <button onclick="tempo_calculator()" type="submit">Calcular tempo</button>
                     <!------------------>
+                    <div class="print">
+                        <!--Nesse <P> com Id é printado o resultado da calculadora---->
+                        <p id="print_result_tempo"></p>
+                        <!-------->
+                    </div>
                 </div>
 
         </div>
